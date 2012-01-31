@@ -248,31 +248,5 @@ class Admin extends CI_Controller{
 </script>';
 	}
 	
-	function preg(){
-		
-$p = array();
-$p[0] = 'The';
-$p[1] = 'quick';
-$p[2] = 'brown';
-$p[3] = 'fox';
-$p[4] = 'jumped';
-$p[5] = 'over';
-$p[6] = 'the';
-$p[7] = 'lazy';
-$p[8] = 'dog';
-		
-$string = implode(" ",$p);
-		
-$patterns = array();
-$patterns[0] = '/quick/';
-$patterns[1] = '/brown/';
-$patterns[2] = '/fox/';
-$replacements = array();
-$replacements[2] = 'bear';
-$replacements[1] = 'black';
-$replacements[0] = 'slow';
-echo preg_replace($patterns, $replacements, $string);
-
-
-	}
+	
 }
