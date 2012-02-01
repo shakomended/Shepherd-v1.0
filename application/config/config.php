@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://localhost/hhdb';
+$config['base_url']	= 'http://database.rccghopehall.com';
 
 /*
 |--------------------------------------------------------------------------
