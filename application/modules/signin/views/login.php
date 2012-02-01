@@ -11,7 +11,7 @@
 <div id="header">Hope Hall Members Database</div>
 <div id="subheader"><h2>CRMlite10 beta</h2></div>
 
-<div id="center">
+<div id="center2">
 <h2>Administrator Login</h2>
 
 <?php echo form_open('signin/validateadmin');?>
