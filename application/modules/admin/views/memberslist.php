@@ -14,9 +14,13 @@
 <div id="center2">
 <span class='link'><?php echo anchor("admin/membersfull", 'Full View', 'title="Full view"');?></span>
 <?php echo "<p><b>".$total_rows."</b> Results found. You searched for:<b> ".$string."</b></p>";?>
+<?php
+$attributes = array('class' => 'members', 'name' => 'memform');
+	echo form_open('messages', $attributes);
+?>
 <table cellpadding="6px",border="2px">
 	<thead>
-	<th>#</th>	
+	<th><td><input type="checkbox" name="Check_ctr" value="yes"onClick="Check(document.memform.check_list)"></td></th>	
 	<th>First name</th>
 	<th>Last name</th>
 	<th>Group</th>
@@ -24,17 +28,19 @@
 	<th>View</th>
 	</thead>	
 <?php 
-
-	echo form_open();
+	
+	
 	foreach ($records->result() as $row)
 {
 	$chkbox = array(
-    'name'        => $row->id,
+    'name'		=>'check_list',
+    'value'        => $row->id,
     'id'          => $row->id,
     'style'       => 'margin:10px',
     );
   ?>
   <tr>
+  	<td></td>
    <td><?php echo form_checkbox($chkbox);?></td>	
    <td><?php echo $row->fname;?></td>
    <td><?php echo $row->lname;?></td>
@@ -71,5 +77,23 @@
 	$('tr:odd').css('background', '#e3e3e3');
 	
 </script>
+
+<SCRIPT LANGUAGE="JavaScript">
+	<!-- Begin
+function Check(chk)
+{
+if(document.memform.Check_ctr.checked==true){
+for (i = 0; i < chk.length; i++)
+chk[i].checked = true ;
+}else{
+
+for (i = 0; i < chk.length; i++)
+chk[i].checked = false ;
+}
+}
+
+// End -->
+</script>
+
 </body>
 </html>

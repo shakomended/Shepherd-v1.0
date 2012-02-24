@@ -13,8 +13,13 @@
 <div id="center">
 
 <span class="link"><?php echo anchor("admin/members", 'Simple View', 'title="Simple view"');?></span>
+<?php
+$attributes = array('class' => 'members', 'name' => 'memform');
+	echo form_open('messages', $attributes);
+?>
 <table cellpadding="6px",border="2px">
 	<th>
+		<td><input type="checkbox" name="Check_ctr" value="yes"onClick="Check(document.memform.check_list)"></td>
 		<td>First</td>
 		<td>Last</td>
 		<td>Other</td>
@@ -28,17 +33,18 @@
 		<td>View</td>
 	</th>
 <?php 
-
-	echo form_open();
+	
 	foreach ($records->result() as $row)
 {
 	$chkbox = array(
-    'name'        => $row->id,
+    'name'		=>'check_list',
+    'value'        => $row->id,
     'id'          => $row->id,
     'style'       => 'margin:10px',
     );
   ?>
   <tr>
+   <td></td>
    <td><?php echo form_checkbox($chkbox);?></td>	
    <td><?php echo $row->fname;?></td>
    <td><?php echo $row->lname;?></td>
@@ -73,7 +79,24 @@ echo $this->pagination->create_links();?>
 </div>
 <script type="text/javascript" charset="UTF-8">
 	$('tr:odd').css('background', '#e3e3e3');
-	
+
+</script>
+
+<SCRIPT LANGUAGE="JavaScript">
+	<!-- Begin
+function Check(chk)
+{
+if(document.memform.Check_ctr.checked==true){
+for (i = 0; i < chk.length; i++)
+chk[i].checked = true ;
+}else{
+
+for (i = 0; i < chk.length; i++)
+chk[i].checked = false ;
+}
+}
+
+// End -->
 </script>
 </body>
 </html>
