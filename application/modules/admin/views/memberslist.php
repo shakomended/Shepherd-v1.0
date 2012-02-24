@@ -13,6 +13,7 @@
 
 <div id="center2">
 <span class='link'><?php echo anchor("admin/membersfull", 'Full View', 'title="Full view"');?></span>
+<?php echo "<p><b>".$total_rows."</b> Results found. You searched for:<b> ".$string."</b></p>";?>
 <table cellpadding="6px",border="2px">
 	<thead>
 	<th>#</th>	
@@ -55,7 +56,10 @@
 	
 	echo form_close();
 ?>
-
+<div>
+	
+	<?php $this->load->view('statistics');?>
+</div>
 
 
 

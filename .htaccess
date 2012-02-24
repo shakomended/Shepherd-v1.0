@@ -15,7 +15,3 @@ Options FollowSymLinks
     ErrorDocument 404 /index.php
 </IfModule> 
 
-<Files dba.php>
-  order allow,deny
-  deny from all
-</Files>

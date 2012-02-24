@@ -8,7 +8,7 @@
  ?>
 	
 <div class="logout">
-	
+
 
 Welcome <?php echo $session_user."&#32;"; ?>
 <?php echo anchor('signin/logout', 'Logout');?></div>

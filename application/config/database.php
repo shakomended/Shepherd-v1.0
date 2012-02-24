@@ -47,7 +47,7 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'rccghopehall.netfirmsmysql.com';
+$db['default']['hostname'] = 'localhost';
 $db['default']['username'] = 'shakomended';
 $db['default']['password'] = '13kofo20tolu';
 $db['default']['database'] = 'hopehall';

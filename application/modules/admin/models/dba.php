@@ -75,12 +75,12 @@ class Dba extends CI_Model {
 	var r=confirm("Member successfully added to database");
 if (r==true)
   {
-  window.location.replace("http://localhost/hhdb/admin/members")
+  window.location.replace("http://localhost/hhdb/index.php/admin/members")
   }
 else
   {
   alert("Oopps!! You made a mistake? Just search for the member and edit it.")
-  window.location.replace("http://localhost/hhdb/admin/members")
+  window.location.replace("http://localhost/hhdb/index.php/admin/members")
   }
 </script>';
 		

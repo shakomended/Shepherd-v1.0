@@ -28,6 +28,12 @@ class Admin extends CI_Controller{
 	}
 
 	
+	//function with basic statistics
+	function stats(){
+		
+		$stats['total_rows']= $this->db->get('members_db')->num_rows();
+		$this->load->view('statistics', $stats);
+	}
 	//functions for viewing the members list
 	//simple members list
 	function members (){
@@ -41,6 +47,8 @@ class Admin extends CI_Controller{
 		$data['records'] = $this->db->get('members_db',$config['per_page'], $this->uri->segment(3));
 		
 		$this->load->view('memberslist', $data);
+		
+		
 	}
 
 	//full members list

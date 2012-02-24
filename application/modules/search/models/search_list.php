@@ -22,7 +22,7 @@ class Search_list extends CI_Model{
 		);
 	
 	
-	//pagination
+	//the pagination configuration
 
 		
 		$result_num = 8;
@@ -32,11 +32,10 @@ class Search_list extends CI_Model{
 		$config['total_rows'] = $q->num_rows();
 		$config['per_page'] = $result_num;
 		$config['num_links'] = 5;
-		
-		
-		
+				
 		$this->pagination->initialize($config);
-		
+		//pagination config ended
+		//query continued
 		 
 		$this->db->or_like($fields);
 		$query = $this->db->get('members_db',$result_num,$this->uri->segment(3));
