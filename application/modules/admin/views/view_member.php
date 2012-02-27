@@ -34,5 +34,4 @@
  ?>
 
 </div>
-</body>
-</html>
+<div id="header"><?php $this->load->view('../includes/footer') ?></div>

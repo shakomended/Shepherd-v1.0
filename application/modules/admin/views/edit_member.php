@@ -200,5 +200,4 @@ echo form_reset('reset', 'Reset Form');
 <?php echo form_close(); ?>
 
 </div>
-</body>
-</html>
+<div id="header"><?php $this->load->view('../includes/footer') ?></div>
