@@ -9,7 +9,8 @@
 
 <body>
 <div id="header"><?php $this->load->view('../includes/header') ?></div>
-<div id="subheader"><h2>Members List</h2></div>
+<div id="header"><?php $this->load->view('data_header') ?></div>
+<div id="subheader"><h2>Database Center</h2></div>
 
 <div id="center2">
 <span class='link'><?php echo anchor("admin/membersfull", 'Full View', 'title="Full view"');?></span>

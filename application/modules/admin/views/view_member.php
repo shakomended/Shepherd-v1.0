@@ -7,9 +7,9 @@
 </head>
 
 <body>
-
 <div id="header"><?php $this->load->view('../includes/header') ?></div>
-<div id="subheader"><h2>Single Member View</h2></div>
+<div id="header"><?php $this->load->view('data_header') ?></div>
+<div id="subheader"><h2>Database Center</h2></div>
 
 <div id="center">
 <?php foreach ($single->result() as $row)?>

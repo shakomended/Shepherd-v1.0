@@ -9,7 +9,9 @@
 
 <body>
 <div id="header"><?php $this->load->view('../includes/header') ?></div>
-<div id="subheader"><h2>Members List</h2></div>
+<div id="header"><?php $this->load->view('data_header') ?></div>
+<div id="subheader"><h2>Database Center</h2></div>
+
 <div id="center">
 
 <span class="link"><?php echo anchor("admin/members", 'Simple View', 'title="Simple view"');?></span>

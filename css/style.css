@@ -50,6 +50,17 @@ span.headlinks a:hover{
 	text-decoration:none;
 	color:#ff0;
 }
+
+span.headlinks2 a{
+	text-decoration:none;
+	color:#0f0;
+	font-size: 18px;
+}
+
+span.headlinks2 a:hover{
+	text-decoration:none;
+	color:#f00;
+}
 .error{
 	color: #f0f;
 	

@@ -2,8 +2,9 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
 
 <span class='headlinks'>
-<?php echo anchor("admin/members", 'View Members', 'title="View member"')."&#32;";
- echo anchor("admin/form", 'Add Members', 'title="Add member"')."&#32;";
+<?php echo anchor("admin/members", 'Database', 'title="Database"')."&#32;";
+ echo anchor("messages/sms", 'Messages', 'title="Messages"')."&#32;";
+
 
  ?>
 	

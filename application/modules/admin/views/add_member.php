@@ -7,9 +7,9 @@
 </head>
 
 <body>
-
 <div id="header"><?php $this->load->view('../includes/header') ?></div>
-<div id="subheader"><h2>Add New Member</h2></div>
+<div id="header"><?php $this->load->view('data_header') ?></div>
+<div id="subheader"><h2>Database Center</h2></div>
 <div id="center2">
 
 <?php 
