@@ -12,9 +12,13 @@
 <div id="subheader"><h2>Welcome to the Database</h2></div>
 
 <div id="center">
-
+<?php
+$attributes = array('class' => 'members', 'name' => 'memform');
+	echo form_open('messages', $attributes);
+?>
 <table cellpadding="6px",border="2px">
 	<th>
+		<td><input type="checkbox" name="Check_ctr" value="yes"onClick="Check(document.memform.check_list)"></td>
 		<td>First</td>
 		<td>Last</td>
 		<td>Other</td>
@@ -29,7 +33,7 @@
 	</th>
 <?php 
 
-	echo form_open();
+	
 	echo "<p><b>".$total."</b> Results found. You searched for:<b> ".$string."</b></p>";
 	
 	
@@ -43,12 +47,14 @@
 	
 	$m_id =$row['id'];
 	$chkbox = array(
-    'name'        => $m_id,
-    'id'          => $m_id,
+    'name'		=>'check_list',
+    'value'        => $row->id,
+    'id'          => $row->id,
     'style'       => 'margin:10px',
     );
   ?>
   <tr>
+  	<td></td>
    <td><?php echo form_checkbox($chkbox);?></td>	
    
    <td><?php $fname = $row['fname'];
@@ -107,7 +113,22 @@
 	$('tr:odd').css('background', '#e3e3e3');
 	
 </script>
+<SCRIPT LANGUAGE="JavaScript">
+	<!-- Begin
+function Check(chk)
+{
+if(document.memform.Check_ctr.checked==true){
+for (i = 0; i < chk.length; i++)
+chk[i].checked = true ;
+}else{
 
+for (i = 0; i < chk.length; i++)
+chk[i].checked = false ;
+}
+}
+
+// End -->
+</script>
 
 </div>
 </body>
